@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Array [
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 30,
+      "mana": 1,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 29,
+      "mana": 0,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 29,
+      "mana": 1,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 29,
+      "mana": 1,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 29,
+      "mana": 2,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 29,
+      "mana": 1,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 27,
+      "mana": 2,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 29,
+      "mana": 2,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 27,
+      "mana": 3,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 26,
+      "mana": 2,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 27,
+      "mana": 3,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 26,
+      "mana": 3,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 27,
+      "mana": 4,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 23,
+      "mana": 3,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 24,
+      "mana": 4,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 23,
+      "mana": 4,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 24,
+      "mana": 5,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 18,
+      "mana": 4,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 19,
+      "mana": 5,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 18,
+      "mana": 5,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 19,
+      "mana": 6,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 12,
+      "mana": 5,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 13,
+      "mana": 6,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 12,
+      "mana": 6,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 13,
+      "mana": 7,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 7,
+      "mana": 6,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 6,
+      "mana": 7,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 7,
+      "mana": 7,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": false,
+    "player1": Object {
+      "handcards": Array [],
+      "health": 6,
+      "mana": 8,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 3,
+      "mana": 7,
+      "name": "b",
+    },
+  },
+  Object {
+    "isEnd": true,
+    "player1": Object {
+      "handcards": Array [],
+      "health": -2,
+      "mana": 8,
+      "name": "a",
+    },
+    "player2": Object {
+      "handcards": Array [],
+      "health": 3,
+      "mana": 8,
+      "name": "b",
+    },
+  },
+]
+`;

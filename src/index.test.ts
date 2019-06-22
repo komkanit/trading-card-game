@@ -93,3 +93,220 @@ describe('Draw phase', () => {
        expect(board.currentPlayer.health).toEqual(29)
     })
 })
+describe('snapshots test', () => {
+    const player1 = new Player({
+        name: 'a',
+        cards: [
+            new Card({ mana: 3 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 1 }),
+            new Card({ mana: 5 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 1 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 8 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 5 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 7 }),
+        ]
+    })
+    const player2 = new Player({
+        name: 'b',
+        cards: [
+            new Card({ mana: 1 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 5 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 1 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 8 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 7 }),
+            new Card({ mana: 5 }),
+        ]
+    })
+    const board = new Board({
+        player1,
+        player2
+    })
+    const snap: any[] = []
+    //1
+    board.startGame(1)
+    board.drawPhase(3)
+    board.initialTurnPhase()
+    board.actions([2, 1])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(3)
+    board.initialTurnPhase()
+    board.actions([0,0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([1])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([2])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([2])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([1])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([1])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0,0,0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0,0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0,0])
+    snap.push({
+        player1: player1.toJson(),
+        player2: player2.toJson(),
+        isEnd: board.isGameEnd()
+    })
+    board.endPhase()
+    expect(snap).toMatchSnapshot()
+})
