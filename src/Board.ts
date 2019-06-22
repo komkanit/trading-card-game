@@ -19,13 +19,13 @@ class Board {
         this.maxHandSize = 5
         this.maxMana = 10
     }
-    public startGame() {
+    public startGame(number: 1 | 2) {
         if (!this.player1 || !this.player2) {
             throw new Error('cannot start game. waiting for other player')
         }
         this.start = true
         // this.currentPlayerKey = Math.floor(Math.random() * 2) + 1 as 1 | 2
-        this.currentPlayerKey = 1
+        this.currentPlayerKey = number
     }
     get currentPlayer() {
         if (!this.currentPlayerKey) {

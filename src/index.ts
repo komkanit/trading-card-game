@@ -58,7 +58,7 @@ function main() {
         player1,
         player2
     })
-    board.startGame()
+    board.startGame(1)
     board.drawPhase(3)
     board.initialTurnPhase()
     board.actions([2, 1])
