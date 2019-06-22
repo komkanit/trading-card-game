@@ -58,26 +58,84 @@ function main() {
         player1,
         player2
     })
+    //1
     board.startGame(1)
     board.drawPhase(3)
     board.initialTurnPhase()
     board.actions([2, 1])
     board.endPhase()
-
+    //2
     board.drawPhase(3)
     board.initialTurnPhase()
     board.actions([0,0])
     board.endPhase()
-
+    //1
     board.drawPhase(1)
     board.initialTurnPhase()
     board.endPhase()
-
+    //2
     board.drawPhase(1)
     board.initialTurnPhase()
     board.actions([1])
     board.endPhase()
-
-    console.log(player1.health, player2.health)
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([2])
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([2])
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([1])
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([1])
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0,0,0])
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0,0])
+    board.endPhase()
+    //1
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0])
+    board.endPhase()
+    //2
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([0,0])
+    board.endPhase()
 }
 main()

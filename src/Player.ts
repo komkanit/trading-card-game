@@ -44,6 +44,14 @@ class Player {
     public addCardToHand(cards: Card[]) {
         this.handcards.push(...cards)
     }
+    public toJson() {
+        return {
+            name: this.name,
+            health: this.health,
+            handcards: this.handcards,
+            mana: this.mana
+        }
+    }
     get handCardCount() {
         return this.handcards.length
     }

@@ -56,12 +56,18 @@ class Board {
         }
     }
     public initialTurnPhase() {
+        if (this.isGameEnd()) {
+            return
+        }
         if (this.maxMana > this.currentPlayer.mana) {
             this.currentPlayer.mana++
         }
         this.currentPlayer.currentMana = this.currentPlayer.mana
     }
     public actions(cards: number[]) {
+        if (this.isGameEnd()) {
+            return
+        }
         cards.forEach((card) => {
             try {
                 const useCard = this.currentPlayer.useCard(card)
@@ -78,11 +84,19 @@ class Board {
         return this.enemyPlayer.health <= 0 || this.currentPlayer.health <= 0
     }
     public endPhase() {
+        if (this.isGameEnd()) {
+            console.log(`game end, player ${this.currentPlayer.name} is win.`)
+        }
+        console.log('current')
+        console.log(this.currentPlayer.toJson())
+        console.log('enemy')
+        console.log(this.enemyPlayer.toJson())
         if (this.currentPlayerKey === 1) {
             this.currentPlayerKey = 2
         } else {
             this.currentPlayerKey = 1
         }
+        console.log('---------------------------')
     }
 }
 
