@@ -1,13 +1,58 @@
 import { Player } from './Player'
 import { Board } from './Board'
+import { Card } from './Card'
+
+
 function main() {
     const player1 = new Player({
         name: 'a',
-        cards: [0,0,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,7,8]
+        cards: [
+            new Card({ mana: 3 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 1 }),
+            new Card({ mana: 5 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 1 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 8 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 5 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 7 }),
+        ]
     })
     const player2 = new Player({
         name: 'b',
-        cards: [0,0,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,7,8]
+        cards: [
+            new Card({ mana: 1 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 5 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 6 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 0 }),
+            new Card({ mana: 1 }),
+            new Card({ mana: 4 }),
+            new Card({ mana: 3 }),
+            new Card({ mana: 8 }),
+            new Card({ mana: 2 }),
+            new Card({ mana: 7 }),
+            new Card({ mana: 5 }),
+        ]
     })
     const board = new Board({
         player1,
@@ -15,16 +60,24 @@ function main() {
     })
     board.startGame()
     board.drawPhase(3)
-    console.log(board.currentPlayer.handcards)
-    console.log(board.currentPlayer.cards)
-    console.log(board.currentPlayer.name)
-    console.log('----')
-    console.log(player1.handcards)
-    console.log(player1.cards)
-    console.log(player1.name)
-    console.log('----')
-    console.log(player2.name)
-    console.log(player2.handcards)
-    console.log(player2.cards)
+    board.initialTurnPhase()
+    board.actions([2, 1])
+    board.endPhase()
+
+    board.drawPhase(3)
+    board.initialTurnPhase()
+    board.actions([0,0])
+    board.endPhase()
+
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.endPhase()
+
+    board.drawPhase(1)
+    board.initialTurnPhase()
+    board.actions([1])
+    board.endPhase()
+
+    console.log(player1.health, player2.health)
 }
 main()
